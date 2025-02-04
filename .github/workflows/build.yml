@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: Upload
+    name: Build and Validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,13 +21,15 @@ jobs:
       # Validate all JSON files in v1
       - name: Validate JSON
         run: |
-          # Fail the step if any file is invalid
+          # Fail this step if any file is invalid
           find v1 -type f -name "*.json" -print0 | while IFS= read -r -d '' file; do
             echo "Validating $file"
             jq empty "$file"
           done
 
+      # Only upload on push to main
       - name: Upload to R2
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: ryand56/r2-upload-action@v1.3.2
         with:
           r2-secret-access-key: ${{ secrets.R2_ACCESS_SECRET_KEY }}
