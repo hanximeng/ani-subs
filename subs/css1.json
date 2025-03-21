@@ -858,6 +858,7 @@
             "searchUrl": "https://www.eacg1.com/vodsearch/-------------.html?wd={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
             "requestInterval": 5000,
             "subjectFormatId": "a",
@@ -875,12 +876,12 @@
               "selectNames": "$[*]['title','name']",
               "preferShorterName": true
             },
-            "channelFormatId": "no-channel",
+            "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
-              "selectChannelNames": ".fed-play-btns a",
-              "matchChannelName": "^(?<ch>.+?)(\\d+)?",
-              "selectEpisodeLists": ".fed-play-item .fed-part-rows",
-              "selectEpisodesFromList": "a",
+              "selectChannelNames": "body .fed-part-case .fed-tabs-boxs li.fed-play-btns a",
+              "matchChannelName": "^(?<ch>.+)(\\d+)?",
+              "selectEpisodeLists": ".fed-drop-boxs.fed-drop-btms  .fed-play-item",
+              "selectEpisodesFromList": ".fed-col-lg1 a",
               "selectEpisodeLinksFromList": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
