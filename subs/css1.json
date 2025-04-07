@@ -66,7 +66,6 @@
           "tier": 0
         }
       },
-      
       {
         "factoryId": "web-selector",
         "version": 2,
@@ -882,6 +881,7 @@
             "searchUrl": "https://www.fqdm.cc/index.php/vod/search.html?wd={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
             "requestInterval": 3000,
             "subjectFormatId": "a",
@@ -913,7 +913,8 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
-            "defaultResolution": "1080P",
+            "defaultResolution": "720P",
+            "defaultSubtitleLanguage": "CHS",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -922,8 +923,8 @@
             },
             "matchVideo": {
               "enableNestedUrl": true,
-              "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(\\.m3u8$)).*(\\?.+)?)|(akamaized)|(bilivideo.com)|(.+top/\\?url=(?<v>.+))",
+              "matchNestedUrl": "(^.+(m3u8|vip|xigua\\.php).+\\?)",
+              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(\\.m3u8$)).*(\\?.+)?)|(akamaized)|(bilivideo.com)|(.+top/\\?url=(?<v>.+))|(https://play.xluuss.com.+)",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
@@ -931,7 +932,7 @@
               }
             }
           },
-          "tier": 2
+          "tier": 4
         }
       },
       {
