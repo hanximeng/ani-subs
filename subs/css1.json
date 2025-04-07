@@ -140,6 +140,8 @@
           "searchConfig": {
             "searchUrl": "https://vdm10.com/search/-------------.html?wd={keyword}",
             "searchUseOnlyFirstWord": true,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
             "requestInterval": 3000,
             "subjectFormatId": "a",
@@ -160,7 +162,7 @@
             "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
               "selectChannelNames": "#play div.con_juji_bg div.playlist-tab ul li.tab-switch a",
-              "matchChannelName": "^(\uE62F)?(?<ch>.+?)(\\d+)?$",
+              "matchChannelName": "^(?!最新可用播放器)()?(?<ch>.+?)(\\d+)?$",
               "selectEpisodeLists": ".con_c2_list",
               "selectEpisodesFromList": "a",
               "selectEpisodeLinksFromList": "",
@@ -171,6 +173,7 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
+            "defaultResolution": "720p",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
