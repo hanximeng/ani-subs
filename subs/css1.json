@@ -98,7 +98,7 @@
             "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
               "selectChannelNames": ".anthology-tab > div.swiper-wrapper > a",
-              "matchChannelName": "^(?!【高画2】B站)(?<ch>.+?)(\\d+)?$",
+              "matchChannelName": "^(?!【高画2】B站)(?<ch>【超高画】.+?)(\\d+)?$",
               "selectEpisodeLists": ".anthology-list-box",
               "selectEpisodesFromList": "a",
               "selectEpisodeLinksFromList": "",
@@ -111,6 +111,7 @@
             },
             "defaultResolution": "1080P",
             "defaultSubtitleLanguage": "CHS",
+            "onlySupportsPlayers": [],
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
