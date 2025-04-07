@@ -181,6 +181,7 @@
               "distinguishSubjectName": true,
               "distinguishChannelName": true
             },
+            "onlySupportsPlayers": ["exoplayer", "avkit"],
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "(^.+(m3u8|vip|xigua\\.php).+\\?)|(.+player.cycanime.com/\\?url=.+)",
@@ -1181,66 +1182,7 @@
           "tier": 2
         }
       },
-      {
-        "factoryId": "web-selector",
-        "version": 2,
-        "arguments": {
-          "name": "漫岛",
-          "description": "",
-          "iconUrl": "https://www.imandaow.com/favicon.ico",
-          "searchConfig": {
-            "searchUrl": "https://www.imandaow.com/search/{keyword}",
-            "searchUseOnlyFirstWord": true,
-            "rawBaseUrl": "",
-            "subjectFormatId": "a",
-            "selectorSubjectFormatA": {
-              "selectLists": "body > div.wrap > div.index-tj.mb.clearfix > ul > li > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatIndexed": {
-              "selectNames": ".search-box .thumb-content > .thumb-txt",
-              "selectLinks": ".search-box .thumb-menu > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatJsonPathIndexed": {
-              "selectLinks": "$[*]['url', 'link']",
-              "selectNames": "$[*]['title','name']",
-              "preferShorterName": true
-            },
-            "channelFormatId": "no-channel",
-            "selectorChannelFormatFlattened": {
-              "selectChannelNames": ".anthology-tab > .swiper-wrapper a",
-              "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-              "selectEpisodeLists": ".anthology-list-box",
-              "selectEpisodesFromList": "a",
-              "selectEpisodeLinksFromList": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "selectorChannelFormatNoChannel": {
-              "selectEpisodes": "#stab_1_71 > ul > li > a",
-              "selectEpisodeLinks": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "filterByEpisodeSort": true,
-            "filterBySubjectName": true,
-            "selectMedia": {
-              "distinguishSubjectName": true,
-              "distinguishChannelName": true
-            },
-            "matchVideo": {
-              "enableNestedUrl": true,
-              "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(\\.m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)",
-              "cookies": "quality=1080",
-              "addHeadersToVideo": {
-                "referer": "",
-                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-              }
-            }
-          },
-          "tier": 2
-        }
-      },
+      
       {
         "factoryId": "web-selector",
         "version": 2,
@@ -1306,67 +1248,7 @@
           "tier": 1
         }
       },
-      {
-        "factoryId": "web-selector",
-        "version": 2,
-        "arguments": {
-          "name": "路漫漫",
-          "description": "",
-          "iconUrl": "https://www.lmm68.com/template/jable/statics/icon/apple-touch-icon.png",
-          "searchConfig": {
-            "searchUrl": "https://www.lmm68.com/vod/search.html?wd={keyword}",
-            "searchUseOnlyFirstWord": true,
-            "searchRemoveSpecial": true,
-            "rawBaseUrl": "",
-            "subjectFormatId": "a",
-            "selectorSubjectFormatA": {
-              "selectLists": "div.detail > h6 > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatIndexed": {
-              "selectNames": ".search-box .thumb-content > .thumb-txt",
-              "selectLinks": ".search-box .thumb-menu > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatJsonPathIndexed": {
-              "selectLinks": "$[*]['url', 'link']",
-              "selectNames": "$[*]['title','name']",
-              "preferShorterName": true
-            },
-            "channelFormatId": "index-grouped",
-            "selectorChannelFormatFlattened": {
-              "selectChannelNames": "div.module-tab-content > div.module-tab-item > span",
-              "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-              "selectEpisodeLists": " div.module-list.module-player-list",
-              "selectEpisodesFromList": "a",
-              "selectEpisodeLinksFromList": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "selectorChannelFormatNoChannel": {
-              "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
-              "selectEpisodeLinks": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "filterByEpisodeSort": true,
-            "filterBySubjectName": true,
-            "selectMedia": {
-              "distinguishSubjectName": true,
-              "distinguishChannelName": true
-            },
-            "matchVideo": {
-              "enableNestedUrl": true,
-              "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)|(bdxiguavod)",
-              "cookies": "quality=1080",
-              "addHeadersToVideo": {
-                "referer": "",
-                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-              }
-            }
-          },
-          "tier": 2
-        }
-      },
+      
       {
         "factoryId": "web-selector",
         "version": 2,
@@ -1428,67 +1310,7 @@
           "tier": 3
         }
       },
-      {
-        "factoryId": "web-selector",
-        "version": 2,
-        "arguments": {
-          "name": "思思动漫",
-          "description": "",
-          "iconUrl": "https://www.sisidm.com/favicon.ico",
-          "searchConfig": {
-            "searchUrl": "https://www.sisidm.com/search/-------------/?wd={keyword}",
-            "searchUseOnlyFirstWord": true,
-            "searchRemoveSpecial": true,
-            "rawBaseUrl": "",
-            "subjectFormatId": "a",
-            "selectorSubjectFormatA": {
-              "selectLists": ".hl-item-title > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatIndexed": {
-              "selectNames": ".search-box .thumb-content > .thumb-txt",
-              "selectLinks": ".search-box .thumb-menu > a",
-              "preferShorterName": true
-            },
-            "selectorSubjectFormatJsonPathIndexed": {
-              "selectLinks": "$[*]['url', 'link']",
-              "selectNames": "$[*]['title','name']",
-              "preferShorterName": true
-            },
-            "channelFormatId": "index-grouped",
-            "selectorChannelFormatFlattened": {
-              "selectChannelNames": ".hl-plays-from > a",
-              "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-              "selectEpisodeLists": ".hl-tabs-box",
-              "selectEpisodesFromList": "a",
-              "selectEpisodeLinksFromList": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "selectorChannelFormatNoChannel": {
-              "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
-              "selectEpisodeLinks": "",
-              "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
-            },
-            "filterByEpisodeSort": true,
-            "filterBySubjectName": true,
-            "selectMedia": {
-              "distinguishSubjectName": true,
-              "distinguishChannelName": true
-            },
-            "matchVideo": {
-              "enableNestedUrl": false,
-              "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(?!.+player/\\?type=)(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)",
-              "cookies": "quality=1080",
-              "addHeadersToVideo": {
-                "referer": "",
-                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-              }
-            }
-          },
-          "tier": 2
-        }
-      },
+      
       {
         "factoryId": "web-selector",
         "version": 2,
