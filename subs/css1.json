@@ -1246,7 +1246,9 @@
             "searchUrl": "https://cn.kimivod.com/search.php?searchword={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
+            "requestInterval": 3000,
             "subjectFormatId": "a",
             "selectorSubjectFormatA": {
               "selectLists": "#searchList > li > div.detail > h4 > a",
@@ -1276,6 +1278,8 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
+            "defaultResolution": "1080P",
+            "defaultSubtitleLanguage": "CHT",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -1293,7 +1297,7 @@
               }
             }
           },
-          "tier": 3
+          "tier": 1
         }
       },
       {
