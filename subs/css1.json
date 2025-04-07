@@ -452,6 +452,7 @@
             "searchUrl": "https://www.mcydh.com/vodsearch/-------------.html?wd={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
             "requestInterval": 3000,
             "subjectFormatId": "indexed",
@@ -483,6 +484,7 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
+            "defaultResolution": "720P",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -500,7 +502,7 @@
               }
             }
           },
-          "tier": 0
+          "tier": 1
         }
       },
       {
