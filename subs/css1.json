@@ -943,7 +943,9 @@
             "searchUrl": "https://www.akianime.cc/index.php/vod/search.html?wd={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
             "rawBaseUrl": "",
+            "requestInterval": 3000,
             "subjectFormatId": "indexed",
             "selectorSubjectFormatA": {
               "selectLists": "div.video-info-header > a",
@@ -962,7 +964,7 @@
             "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
               "selectChannelNames": ".anthology-tab > div.swiper-wrapper > a",
-              "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+              "matchChannelName": "^(?!【高画2】B站)(?<ch>.+?)(\\d+)?$",
               "selectEpisodeLists": ".anthology-list-box",
               "selectEpisodesFromList": "a",
               "selectEpisodeLinksFromList": "",
@@ -973,6 +975,8 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
+            "defaultResolution": "1080P",
+            "defaultSubtitleLanguage": "CHS",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -990,7 +994,7 @@
               }
             }
           },
-          "tier": 2
+          "tier": 0
         }
       },
       {
