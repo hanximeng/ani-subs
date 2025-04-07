@@ -911,7 +911,7 @@
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
-            "defaultResolution": "1080P",
+            "defaultResolution": "720P",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -929,7 +929,7 @@
               }
             }
           },
-          "tier": 1
+          "tier": 3
         }
       },
       {
