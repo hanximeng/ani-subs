@@ -336,11 +336,11 @@
         "factoryId": "web-selector",
         "version": 2,
         "arguments": {
-          "name": "kimivod",
+          "name": "NT动漫",
           "description": "",
-          "iconUrl": "https://kimivod.com/apple-touch-icon.png",
+          "iconUrl": "https://cdn.yinghuazy.xyz/webjs/ntdm8/image/favicon.ico",
           "searchConfig": {
-            "searchUrl": "https://cn.kimivod.com/search.php?searchword={keyword}",
+            "searchUrl": "https://www.ntdm8.com/search/-------------.html?wd={keyword}&page=1",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
             "searchUseSubjectNamesCount": 1,
@@ -348,12 +348,12 @@
             "requestInterval": 3000,
             "subjectFormatId": "a",
             "selectorSubjectFormatA": {
-              "selectLists": "#searchList > li > div.detail > h4 > a",
+              "selectLists": "#container div.blockcontent1 div.cell_imform  a.cell_imform_name",
               "preferShorterName": true
             },
             "selectorSubjectFormatIndexed": {
-              "selectNames": ".play_some",
-              "selectLinks": "#some_drama > div > a",
+              "selectNames": ".search-box .thumb-content > .thumb-txt",
+              "selectLinks": ".search-box .thumb-menu > a",
               "preferShorterName": true
             },
             "selectorSubjectFormatJsonPathIndexed": {
@@ -363,20 +363,21 @@
             },
             "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
-              "selectChannelNames": "body > main > div.tabs > a",
+              "selectChannelNames": "ul#menu0 > li",
               "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-              "selectEpisodeLists": ".playno",
+              "selectEpisodeLists": "div#main0 > div",
               "selectEpisodesFromList": "a",
               "selectEpisodeLinksFromList": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
             "selectorChannelFormatNoChannel": {
-              "selectEpisodes": ".anthology a",
+              "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
             "defaultResolution": "1080P",
-            "defaultSubtitleLanguage": "CHT",
+            "defaultSubtitleLanguage": "CHS",
+            "onlySupportsPlayers": [],
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -386,7 +387,7 @@
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)",
+              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)|(.*muscdn.com.+)|(.+/video/tos/.+)",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
@@ -531,11 +532,11 @@
         "factoryId": "web-selector",
         "version": 2,
         "arguments": {
-          "name": "NT动漫",
+          "name": "kimivod",
           "description": "",
-          "iconUrl": "https://cdn.yinghuazy.xyz/webjs/ntdm8/image/favicon.ico",
+          "iconUrl": "https://kimivod.com/apple-touch-icon.png",
           "searchConfig": {
-            "searchUrl": "https://www.ntdm8.com/search/-------------.html?wd={keyword}&page=1",
+            "searchUrl": "https://cn.kimivod.com/search.php?searchword={keyword}",
             "searchUseOnlyFirstWord": true,
             "searchRemoveSpecial": true,
             "searchUseSubjectNamesCount": 1,
@@ -543,12 +544,12 @@
             "requestInterval": 3000,
             "subjectFormatId": "a",
             "selectorSubjectFormatA": {
-              "selectLists": "#container div.blockcontent1 div.cell_imform  a.cell_imform_name",
+              "selectLists": "#searchList > li > div.detail > h4 > a",
               "preferShorterName": true
             },
             "selectorSubjectFormatIndexed": {
-              "selectNames": ".search-box .thumb-content > .thumb-txt",
-              "selectLinks": ".search-box .thumb-menu > a",
+              "selectNames": ".play_some",
+              "selectLinks": "#some_drama > div > a",
               "preferShorterName": true
             },
             "selectorSubjectFormatJsonPathIndexed": {
@@ -558,21 +559,20 @@
             },
             "channelFormatId": "index-grouped",
             "selectorChannelFormatFlattened": {
-              "selectChannelNames": "ul#menu0 > li",
+              "selectChannelNames": "body > main > div.tabs > a",
               "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
-              "selectEpisodeLists": "div#main0 > div",
+              "selectEpisodeLists": ".playno",
               "selectEpisodesFromList": "a",
               "selectEpisodeLinksFromList": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
             "selectorChannelFormatNoChannel": {
-              "selectEpisodes": "#glist-1 > div.module-blocklist.scroll-box.scroll-box-y > div > a",
+              "selectEpisodes": ".anthology a",
               "selectEpisodeLinks": "",
               "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
             },
             "defaultResolution": "1080P",
-            "defaultSubtitleLanguage": "CHS",
-            "onlySupportsPlayers": [],
+            "defaultSubtitleLanguage": "CHT",
             "filterByEpisodeSort": true,
             "filterBySubjectName": true,
             "selectMedia": {
@@ -582,7 +582,7 @@
             "matchVideo": {
               "enableNestedUrl": true,
               "matchNestedUrl": "^.+(m3u8|vip|xigua\\.php).+\\?",
-              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)|(.*muscdn.com.+)|(.+/video/tos/.+)",
+              "matchVideoUrl": "(^http(s)?:\\/\\/(?!.*http(s)?:\\/\\/).+((\\.mp4)|(\\.mkv)|(m3u8)).*(\\?.+)?)|(akamaized)|(bilivideo.com)",
               "cookies": "quality=1080",
               "addHeadersToVideo": {
                 "referer": "",
